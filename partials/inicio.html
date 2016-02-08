@@ -1,15 +1,16 @@
 <img src="http://www.oregonscenics.com/s-n-p-ci-wide.jpg" class="img-responsive" alt="SkyLine"/>
 <div class="main" ng-controller="news">
     <div class="col col-lg-9">
-        <h2>Bienvenido</h2>
-    </div>
-    <div class="col col-lg-3">
         <div class="new" ng-repeat="new in news">
-            <img ng-src="new.image"/>
+            <h2>{{new.title}}</h2>
+            <img ng-src="images/{{new.image}}"/>
             <ul class="nav nav-pills" role="tablist">
                 <li role="presentation" ng-repeat="subject in new.subjects">{{subject}}</li>
             </ul>
             <p>{{new.intro}}</p>
         </div>
+    </div>
+    <div class="col col-lg-3">
+
     </div>
 </div>
