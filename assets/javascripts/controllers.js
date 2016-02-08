@@ -6,7 +6,7 @@ controladores.controller("news", ['$scope', '$http', '$modal', '$location', '$ro
     var data = [
         {
             subjects: "Moda,Ropa,Eventos,Life Style",
-            image: "http://beoriginalmexico.com/wp-content/uploads/2015/11/moda_mujer_primavera_verano_2013_lookbook_caramelo.jpg",
+            image: "http://static.freepik.com/foto-gratuito/moda-bellezza-illustratore-vettoriale_34-55454.jpg",
             intro: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consectetur eligendi enim fuga laudantium magni nostrum optio possimus, quasi quo sed sint temporibus, vel. Autem eius inventore officiis quo sint!"
         }
     ];
