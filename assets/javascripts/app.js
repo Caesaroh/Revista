@@ -7,7 +7,7 @@ myApp.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.
 	when('/main', {
 		templateUrl: 'partials/inicio.html',
-		controller: 'clientes'
+		controller: 'news'
 	}).
 	when('/clientes', {
 		templateUrl: 'partials/clientes/clientes.html',

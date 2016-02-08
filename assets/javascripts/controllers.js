@@ -1,6 +1,32 @@
 var controladores = angular.module('controladores',['ui.select', 'ui.mask', 'ngSanitize', 'ui.bootstrap']);
 
-controladores.controller("cliente", ['$scope', '$http', '$modal', '$location', '$routeParams', function($scope, $http, $modal, $location, $routeParams){
+controladores.controller("news", ['$scope', '$http', '$modal', '$location', '$routeParams', function($scope, $http, $modal, $location, $routeParams){
+    $scope.news = [];
+
+    var data = [
+        {
+            subjects: "Moda,Ropa,Eventos,Life Style",
+            image: "http://beoriginalmexico.com/wp-content/uploads/2015/11/moda_mujer_primavera_verano_2013_lookbook_caramelo.jpg",
+            intro: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consectetur eligendi enim fuga laudantium magni nostrum optio possimus, quasi quo sed sint temporibus, vel. Autem eius inventore officiis quo sint!"
+        }
+    ];
+
+    for (var i in data) {
+        var subjects = data[i].subjects.split(',');
+
+        if (data[i].image) {
+            $http.get(data[i].image).success(function (img) {
+                $scope.news.push({
+                    subjects: subjects,
+                    image: img,
+                    intro: data[i].intro
+                });
+            });
+        }
+    }
+}]);
+
+/*controladores.controller("cliente", ['$scope', '$http', '$modal', '$location', '$routeParams', function($scope, $http, $modal, $location, $routeParams){
     $scope.regimenes = [
         {
             id: 0,
@@ -316,7 +342,7 @@ controladores.controller('modalCrtl', ['$scope', '$modalInstance', 'obj', functi
     $scope.cancel = function () {
         $modalInstance.dismiss('cancel');
     };
-}]);
+}]);*/
 
 function justNumbers(e) {
     var keynum = window.event ? window.event.keyCode : e.which;
