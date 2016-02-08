@@ -1,25 +1,13 @@
 var controladores = angular.module('controladores',['ui.select', 'ui.mask', 'ngSanitize', 'ui.bootstrap']);
 
 controladores.controller("news", ['$scope', '$http', '$modal', '$location', '$routeParams', function($scope, $http, $modal, $location, $routeParams){
-    $scope.news = [];
-
-    var data = [
+    $scope.news = [
         {
-            subjects: "Moda,Ropa,Eventos,Life Style",
+            subjects: ["Moda", "Ropa", "Eventos", "Life Style"],
             image: "images/0AF45.jpg",
             intro: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consectetur eligendi enim fuga laudantium magni nostrum optio possimus, quasi quo sed sint temporibus, vel. Autem eius inventore officiis quo sint!"
         }
     ];
-
-    for (var i in data) {
-        var subjects = data[i].subjects.split(',');
-
-        $scope.news.push({
-            subjects: subjects,
-            image: data[i].image,
-            intro: data[i].intro
-        });
-    }
 }]);
 
 /*controladores.controller("cliente", ['$scope', '$http', '$modal', '$location', '$routeParams', function($scope, $http, $modal, $location, $routeParams){
