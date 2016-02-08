@@ -3,9 +3,9 @@
     <div class="col col-lg-9">
         <div class="new" ng-repeat="new in news">
             <h2>{{new.title}}</h2>
-            <img ng-src="images/{{new.image}}"/>
+            <img class="img-responsive" ng-src="images/{{new.image}}"/>
             <ul class="nav nav-pills" role="tablist">
-                <li role="presentation" ng-repeat="subject in new.subjects">{{subject}}</li>
+                <li role="presentation" ng-repeat="subject in new.subjects"><a href="">{{subject}}</a></li>
             </ul>
             <p>{{new.intro}}</p>
         </div>

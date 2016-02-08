@@ -3,6 +3,12 @@ var controladores = angular.module('controladores',['ui.select', 'ui.mask', 'ngS
 controladores.controller("news", ['$scope', '$http', '$modal', '$location', '$routeParams', function($scope, $http, $modal, $location, $routeParams){
     $scope.news = [
         {
+            title: "Arquitectura",
+            subjects: ["Arquitectura", "Eventos"],
+            image: "0AF46.png",
+            intro: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam nam neque officiis quas! Dolore eum illo ipsa libero magnam neque sed sunt vero voluptates. Cupiditate doloribus iste quas quasi veritatis!"
+        },
+        {
             title: "Moda",
             subjects: ["Moda", "Ropa", "Eventos", "Life Style"],
             image: "0AF45.jpg",
