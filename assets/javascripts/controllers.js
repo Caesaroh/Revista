@@ -6,7 +6,7 @@ controladores.controller("news", ['$scope', '$http', '$modal', '$location', '$ro
     var data = [
         {
             subjects: "Moda,Ropa,Eventos,Life Style",
-            image: "0AF45.jpg",
+            image: "images/0AF45.jpg",
             intro: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consectetur eligendi enim fuga laudantium magni nostrum optio possimus, quasi quo sed sint temporibus, vel. Autem eius inventore officiis quo sint!"
         }
     ];
@@ -14,15 +14,11 @@ controladores.controller("news", ['$scope', '$http', '$modal', '$location', '$ro
     for (var i in data) {
         var subjects = data[i].subjects.split(',');
 
-        if (data[i].image) {
-            $http.get('images/' + data[i].image).success(function (img) {
-                $scope.news.push({
-                    subjects: subjects,
-                    image: img,
-                    intro: data[i].intro
-                });
-            });
-        }
+        $scope.news.push({
+            subjects: subjects,
+            image: data[i].image,
+            intro: data[i].intro
+        });
     }
 }]);
 
