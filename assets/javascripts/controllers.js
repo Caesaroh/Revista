@@ -1,20 +1,22 @@
-var controladores = angular.module('controladores',['ui.select', 'ui.mask', 'ngSanitize', 'ui.bootstrap']);
+var controladores = angular.module(
+    'controladores',
+    ["ngAnimate", 'ui.bootstrap']
+).controller("news", ['$scope', '$http', '$location', '$routeParams', function($scope, $http, $location, $routeParams){
+    $scope.interval = 5000;
+    $scope.noWrapSlides = true;
+    var slides = $scope.slides = [];
 
-controladores.controller("news", ['$scope', '$http', '$modal', '$location', '$routeParams', function($scope, $http, $modal, $location, $routeParams){
-    $scope.news = [
-        {
-            title: "Arquitectura",
-            subjects: ["Arquitectura", "Eventos"],
-            image: "0AF46.png",
-            intro: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam nam neque officiis quas! Dolore eum illo ipsa libero magnam neque sed sunt vero voluptates. Cupiditate doloribus iste quas quasi veritatis!"
-        },
-        {
-            title: "Moda",
-            subjects: ["Moda", "Ropa", "Eventos", "Life Style"],
-            image: "0AF45.jpg",
-            intro: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consectetur eligendi enim fuga laudantium magni nostrum optio possimus, quasi quo sed sint temporibus, vel. Autem eius inventore officiis quo sint!"
-        }
-    ];
+    slides.push({
+        id: 1,
+        image: 'http://lorempixel.com/600/200/',
+        text: ['Texto', 'más texto', 'tercero', 'último'][slides.length % 4]
+    });
+
+    slides.push({
+        id: 2,
+        image: 'http://lorempixel.com/g/600/200/',
+        text: ['Texto', 'más texto', 'tercero', 'último'][slides.length % 4]
+    });
 }]);
 
 /*controladores.controller("cliente", ['$scope', '$http', '$modal', '$location', '$routeParams', function($scope, $http, $modal, $location, $routeParams){
@@ -333,7 +335,7 @@ controladores.controller('modalCrtl', ['$scope', '$modalInstance', 'obj', functi
     $scope.cancel = function () {
         $modalInstance.dismiss('cancel');
     };
-}]);*/
+}]);
 
 function justNumbers(e) {
     var keynum = window.event ? window.event.keyCode : e.which;
@@ -342,3 +344,4 @@ function justNumbers(e) {
 
     return /\d/.test(String.fromCharCode(keynum));
 }
+ */

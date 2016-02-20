@@ -2,15 +2,15 @@
 <html lang="es" ng-app="App">
 <head>
 	<meta charset="UTF-8"/>
-	<title>Revista</title>
+	<title>Know</title>
 
-	<script src="assets/javascripts/lib/angular/angular.min.js"></script>
-	<script src="assets/javascripts/lib/angular/angular-sanitize.min.js"></script>
-	<script src="assets/javascripts/lib/angular/angular-route.min.js"></script>
-	<script src="assets/javascripts/lib/angular/select.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<script src="assets/javascripts/angular.min.js"></script>
+	<script src="assets/javascripts/angular-route.min.js"></script>
+	<script src="assets/javascripts/angular-animate.min.js"></script>
 	<script src="assets/javascripts/ui-utils/ui-utils.js"></script>
 	<script src="assets/javascripts/ui-utils/ui-utils-ieshiv.min.js"></script>
-	<script src="assets/javascripts/ui-bootstrap/ui-bootstrap-tpls-0.12.1.min.js"></script>
+	<script src="assets/javascripts/ui-bootstrap-1.1.2.min.js"></script>
 	<script src="assets/javascripts/jquery.js"></script>
 	<script src="assets/javascripts/bootstrap.js"></script>
 
@@ -24,7 +24,7 @@
 </head>
 <body>
 <header>
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div>
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -34,7 +34,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="">Revista</a>
+					<a class="navbar-brand" href="">Know</a>
 				</div>
 				<div class="collapse navbar-collapse" id="collapsable">
 					<ul class="nav navbar-nav">

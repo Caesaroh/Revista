@@ -1,16 +1,32 @@
-<img src="http://www.oregonscenics.com/s-n-p-ci-wide.jpg" class="img-responsive" alt="SkyLine"/>
-<div class="main" ng-controller="news">
-    <div class="col col-lg-9">
-        <div class="new" ng-repeat="new in news">
-            <h2>{{new.title}}</h2>
-            <img class="img-responsive" ng-src="images/{{new.image}}"/>
-            <ul class="nav nav-pills" role="tablist">
-                <li role="presentation" ng-repeat="subject in new.subjects"><a href="">{{subject}}</a></li>
-            </ul>
-            <p>{{new.intro}}</p>
+<div class="row">
+    <img src="http://www.oregonscenics.com/s-n-p-ci-wide.jpg" class="img-responsive" alt="SkyLine"/>
+</div>
+<div class="row">
+    <div class="main" ng-controller="news">
+        <div class="row">
+            <uib-carousel interval="interval" no-wrap="noWrapSlides">
+                <uib-slide ng-repeat="slide in slides" active="slide.active" index="slide.id">
+                    <img ng-src="{{slide.image}}" style="margin:auto;">
+                    <div class="carousel-caption">
+                        <h4>Slide {{slide.id}}</h4>
+                        <p>{{slide.text}}</p>
+                    </div>
+                </uib-slide>
+            </uib-carousel>
         </div>
-    </div>
-    <div class="col col-lg-3">
 
+        <div class="col col-lg-9">
+            <div class="new" ng-repeat="new in news">
+                <h2>{{new.title}}</h2>
+                <img class="img-responsive" ng-src="images/{{new.image}}"/>
+                <ul class="nav nav-pills" role="tablist">
+                    <li role="presentation" ng-repeat="subject in new.subjects"><a href="">{{subject}}</a></li>
+                </ul>
+                <p>{{new.intro}}</p>
+            </div>
+        </div>
+        <div class="col col-lg-3">
+
+        </div>
     </div>
 </div>
