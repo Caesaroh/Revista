@@ -1,6 +1,6 @@
 var controladores = angular.module(
     'controladores',
-    ["ngAnimate", 'ui.bootstrap']
+    ['ngAnimate', 'ngTouch', 'ui.bootstrap']
 ).controller("news", ['$scope', '$http', '$location', '$routeParams', function($scope, $http, $location, $routeParams){
     $scope.interval = 5000;
     $scope.noWrapSlides = true;
@@ -8,14 +8,12 @@ var controladores = angular.module(
 
     slides.push({
         id: 1,
-        image: 'http://lorempixel.com/600/200/',
-        text: ['Texto', 'más texto', 'tercero', 'último'][slides.length % 4]
+        image: 'http://lorempixel.com/900/400/'
     });
 
     slides.push({
         id: 2,
-        image: 'http://lorempixel.com/g/600/200/',
-        text: ['Texto', 'más texto', 'tercero', 'último'][slides.length % 4]
+        image: 'http://lorempixel.com/g/900/400/'
     });
 }]);
 

@@ -1,32 +1,113 @@
 <div class="row">
     <img src="http://www.oregonscenics.com/s-n-p-ci-wide.jpg" class="img-responsive" alt="SkyLine"/>
 </div>
-<div class="row">
-    <div class="main" ng-controller="news">
-        <div class="row">
-            <uib-carousel interval="interval" no-wrap="noWrapSlides">
-                <uib-slide ng-repeat="slide in slides" active="slide.active" index="slide.id">
-                    <img ng-src="{{slide.image}}" style="margin:auto;">
-                    <div class="carousel-caption">
-                        <h4>Slide {{slide.id}}</h4>
-                        <p>{{slide.text}}</p>
-                    </div>
-                </uib-slide>
-            </uib-carousel>
-        </div>
-
-        <div class="col col-lg-9">
-            <div class="new" ng-repeat="new in news">
-                <h2>{{new.title}}</h2>
-                <img class="img-responsive" ng-src="images/{{new.image}}"/>
-                <ul class="nav nav-pills" role="tablist">
-                    <li role="presentation" ng-repeat="subject in new.subjects"><a href="">{{subject}}</a></li>
-                </ul>
-                <p>{{new.intro}}</p>
+<div ng-controller="news">
+    <div class="row">
+        <div class="main">
+            <h1>Arquitectura</h1>
+            <div class="col col-lg-9">
+                <uib-carousel interval="interval" no-wrap="noWrapSlides">
+                    <uib-slide ng-repeat="slide in slides" active="slide.active" index="slide.id">
+                        <img ng-src="{{slide.image}}" style="margin:auto;">
+                        <div class="carousel-caption">
+                            <h4>Slide {{slide.id}}</h4>
+                        </div>
+                    </uib-slide>
+                </uib-carousel>
+            </div>
+            <div class="col col-lg-3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aliquid animi at consequuntur cumque eius esse ex, excepturi iusto molestiae neque quam recusandae, reprehenderit rerum sed sint suscipit tenetur?</p>
             </div>
         </div>
-        <div class="col col-lg-3">
-
+    </div>
+    <div class="row alert-danger">
+        <div class="main">
+            <h1>Moda</h1>
+            <div class="col col-lg-3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda beatae cumque ducimus eum impedit in, iusto labore, neque non nostrum officia quibusdam, repudiandae sint soluta tempore vitae? Aliquam, impedit?</p>
+            </div>
+            <div class="col col-lg-9">
+                <uib-carousel interval="interval" no-wrap="noWrapSlides">
+                    <uib-slide ng-repeat="slide in slides" active="slide.active" index="slide.id">
+                        <img ng-src="{{slide.image}}" style="margin:auto;">
+                        <div class="carousel-caption">
+                            <h4>Slide {{slide.id}}</h4>
+                        </div>
+                    </uib-slide>
+                </uib-carousel>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="main">
+            <h1>Salud</h1>
+            <div class="col col-lg-9">
+                <uib-carousel interval="interval" no-wrap="noWrapSlides">
+                    <uib-slide ng-repeat="slide in slides" active="slide.active" index="slide.id">
+                        <img ng-src="{{slide.image}}" style="margin:auto;">
+                        <div class="carousel-caption">
+                            <h4>Slide {{slide.id}}</h4>
+                        </div>
+                    </uib-slide>
+                </uib-carousel>
+            </div>
+            <div class="col col-lg-3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aspernatur autem cupiditate doloremque dolores, error ex, exercitationem fuga impedit inventore ipsa laboriosam maiores qui reprehenderit sequi, sint tempora voluptas voluptatem.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row alert-gray">
+        <div class="main">
+            <h1>Salud</h1>
+            <div class="col col-lg-3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda delectus dolore eos, error excepturi harum ipsam magnam molestias nam nemo odio placeat quas quia repellat sint vitae voluptatum. Explicabo.</p>
+            </div>
+            <div class="col col-lg-9">
+                <uib-carousel interval="interval" no-wrap="noWrapSlides">
+                    <uib-slide ng-repeat="slide in slides" active="slide.active" index="slide.id">
+                        <img ng-src="{{slide.image}}" style="margin:auto;">
+                        <div class="carousel-caption">
+                            <h4>Slide {{slide.id}}</h4>
+                        </div>
+                    </uib-slide>
+                </uib-carousel>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="main">
+            <h1>Salud</h1>
+            <div class="col col-lg-9">
+                <uib-carousel interval="interval" no-wrap="noWrapSlides">
+                    <uib-slide ng-repeat="slide in slides" active="slide.active" index="slide.id">
+                        <img ng-src="{{slide.image}}" style="margin:auto;">
+                        <div class="carousel-caption">
+                            <h4>Slide {{slide.id}}</h4>
+                        </div>
+                    </uib-slide>
+                </uib-carousel>
+            </div>
+            <div class="col col-lg-3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aspernatur autem cupiditate doloremque dolores, error ex, exercitationem fuga impedit inventore ipsa laboriosam maiores qui reprehenderit sequi, sint tempora voluptas voluptatem.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row alert-success">
+        <div class="main">
+            <h1>Salud</h1>
+            <div class="col col-lg-3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda delectus dolore eos, error excepturi harum ipsam magnam molestias nam nemo odio placeat quas quia repellat sint vitae voluptatum. Explicabo.</p>
+            </div>
+            <div class="col col-lg-9">
+                <uib-carousel interval="interval" no-wrap="noWrapSlides">
+                    <uib-slide ng-repeat="slide in slides" active="slide.active" index="slide.id">
+                        <img ng-src="{{slide.image}}" style="margin:auto;">
+                        <div class="carousel-caption">
+                            <h4>Slide {{slide.id}}</h4>
+                        </div>
+                    </uib-slide>
+                </uib-carousel>
+            </div>
         </div>
     </div>
 </div>

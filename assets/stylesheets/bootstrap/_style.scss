@@ -1,0 +1,10 @@
+.main {
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 10%;
+
+  @media (max-width: $screen-md) {
+      padding-left: 2%;
+      padding-right: 2%;
+  }
+}
